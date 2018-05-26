@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Registro_Articulo
+namespace Registro_Articulo.UI.Consultar
 {
-    public partial class MainForm : Form
+    public partial class Consultar_de_Articulos : Form
     {
-        public MainForm()
+        public Consultar_de_Articulos()
         {
             InitializeComponent();
         }
