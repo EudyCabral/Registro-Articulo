@@ -1,5 +1,7 @@
-﻿using Registro_de_Cotizacion_Articulo.DAL;
-using Registro_de_Cotizacion_Articulo.ENTIDADES;
+﻿
+
+using Registro_Articulo.DAL;
+using Registro_Articulo.ENTIDADES;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -7,7 +9,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace Registro_de_Cotizacion_Articulo.BLL
+namespace Registro_Articulo.BLL
 {
     public class ArticuloBLL
     {

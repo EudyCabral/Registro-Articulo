@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 
-namespace Registro_de_Cotizacion_Articulo.ENTIDADES
+namespace Registro_Articulo.ENTIDADES
 {
     public class Articulos
     {

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consultar_de_Articulos));
             this.ConsultardataGridView = new System.Windows.Forms.DataGridView();
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
@@ -36,7 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Imprimirbutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ConsultardataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // ConsultardataGridView
@@ -99,6 +102,7 @@
             this.Imprimirbutton.Text = "Imprimir";
             this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click_1);
             // 
             // Buscarbutton
             // 
@@ -113,6 +117,11 @@
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click_1);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // Consultar_de_Articulos
             // 
@@ -130,7 +139,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Consultar_de_Articulos";
             this.Text = "Consulta De Articulos";
+            this.Load += new System.EventHandler(this.Consultar_de_Articulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ConsultardataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,5 +156,6 @@
         private System.Windows.Forms.ComboBox FiltrocomboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Buscarbutton;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
