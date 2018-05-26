@@ -24,7 +24,7 @@ namespace Registro_Articulo.UI.Registro
         {
 
         }
-
+        //  este Metodo pasa a la clase principal articulo los atributos que contiene el formulario a la hora que se llena
         private Articulos LLenaClase()
         {
             Articulos articulo = new Articulos();
@@ -38,7 +38,11 @@ namespace Registro_Articulo.UI.Registro
             return articulo;
 
         }
-
+         /// <summary>
+         ///  Este Boton Busca una entidad en la base de datos
+         /// </summary>
+         /// <param name="sender"></param>
+         /// <param name="e"></param>
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(ArticuloIDnumericUpDown.Value);
@@ -68,6 +72,7 @@ namespace Registro_Articulo.UI.Registro
             }
         }
 
+        //Este metodo limpia las casillas
         private void Nuevobutton_Click(object sender, EventArgs e)
         {
             ArticuloIDnumericUpDown.Value = 0;
@@ -79,6 +84,7 @@ namespace Registro_Articulo.UI.Registro
             errorProvider.Clear();
         }
 
+        // Este boton esta programado para Guardar una entidad en la base de datos  o tampien tiene la capacidad e modificarlo
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
             Articulos articulos = LLenaClase();
@@ -113,7 +119,7 @@ namespace Registro_Articulo.UI.Registro
             }
 
         }
-
+        //Este boton esta programado para Eliminae una entidad de la base de datos
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(ArticuloIDnumericUpDown.Value);
@@ -135,7 +141,7 @@ namespace Registro_Articulo.UI.Registro
             }
 
         }
-
+        // Valida todos los posibles campos del formulario
         public bool validar(int error)
         {
             bool paso = false;

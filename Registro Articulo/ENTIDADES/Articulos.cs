@@ -6,9 +6,11 @@ using System.Text;
 
 namespace Registro_Articulo.ENTIDADES
 {
+    // se debe Descargar Install-package EntityFrameWork para utilizar la llave primaria
     public class Articulos
     {
-        [Key]
+        // Esta es la LLave Primaria
+        [Key]// kEY   Se importa de la librefia System.ComponentModel.DataAnnotations;
         public int ArticuloId { get; set; }
         public string FechaVencimiento { get; set; }
         public string Descripcion { get; set; }
@@ -16,6 +18,7 @@ namespace Registro_Articulo.ENTIDADES
         public int Existencia { get; set; }
         public int CantidadCotizada { get; set; }
 
+        // Construtor lleno
         public Articulos(int articuloId, string FechaVencimiento, string descripcion, decimal precio, int existencia, int cantidadCotizada)
         {
             ArticuloId = articuloId;
@@ -25,7 +28,7 @@ namespace Registro_Articulo.ENTIDADES
             Existencia = existencia;
             CantidadCotizada = cantidadCotizada;
         }
-
+        // Constructor vacio
         public Articulos()
         {
             ArticuloId = 0;

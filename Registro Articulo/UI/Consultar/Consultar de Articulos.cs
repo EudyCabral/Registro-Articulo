@@ -28,7 +28,7 @@ namespace Registro_Articulo.UI.Consultar
 
      
 
-      
+        //Metodo de validacion  de todos los posible errores que se puedan  dar en el formulario
 
         private bool Validar(int error)
         {
@@ -55,6 +55,8 @@ namespace Registro_Articulo.UI.Consultar
             return paso;
         }
 
+        //Busca una Entidad en la base de datos y la muestra
+        //Comparando con cada uno de los casos del switch
         private void Buscarbutton_Click_1(object sender, EventArgs e)
         {
             //Inicializacion del filtro en True
@@ -66,7 +68,8 @@ namespace Registro_Articulo.UI.Consultar
 
                 case 0://Todo
 
-                    ConsultardataGridView.DataSource = BLL.ArticuloBLL.GetList(filtro);
+                    ConsultardataGridView.DataSource = BLL.ArticuloBLL.GetList(filtro); // Muesta la lista completa de entidade que se encuentran en la 
+                                                                                        //base de datos                                    
 
                     break;
 
@@ -84,7 +87,7 @@ namespace Registro_Articulo.UI.Consultar
                     {
 
                         id = Convert.ToInt32(CriteriotextBox.Text);
-                        filtro = x => x.ArticuloId == id;
+                        filtro = x => x.ArticuloId == id;                              // aqui se busca una entidad por el id y lo lista     
                         if (BLL.ArticuloBLL.GetList(filtro).Count() == 0)
                         {
                             errorProvider.Clear();
@@ -96,7 +99,7 @@ namespace Registro_Articulo.UI.Consultar
                         {
 
                             errorProvider.Clear();
-                            ConsultardataGridView.DataSource = BLL.ArticuloBLL.GetList(filtro);
+                            ConsultardataGridView.DataSource = BLL.ArticuloBLL.GetList(filtro);// aqui lo lista en el datagridview
 
                         }
 
@@ -119,7 +122,7 @@ namespace Registro_Articulo.UI.Consultar
 
                     {
                         filtro = x => x.FechaVencimiento.Equals(CriteriotextBox.Text);
-                        if (BLL.ArticuloBLL.GetList(filtro).Count() == 0)
+                        if (BLL.ArticuloBLL.GetList(filtro).Count() == 0)  // se busca una entidad por la fecha
                         {
                             errorProvider.Clear();
                             MessageBox.Show("Esta Fecha no Existe");
@@ -147,7 +150,7 @@ namespace Registro_Articulo.UI.Consultar
                     else
                     {
                         decimal p = Convert.ToDecimal(CriteriotextBox.Text);
-                        filtro = x => x.Precio == p;
+                        filtro = x => x.Precio == p;                          //se busca una entidad por el precio
                         if (BLL.ArticuloBLL.GetList(filtro).Count() == 0)
                         {
                             MessageBox.Show("Este Precio No Existe");
