@@ -92,7 +92,7 @@ namespace Registro_Articulo.BLL.Tests
         {
             bool paso;
             Articulos articulo = new Articulos();
-
+            
             articulo.ArticuloId = 0;
             articulo.FechaVencimiento = "15/7/2016";
             articulo.Descripcion = "Esto fue excelente";
